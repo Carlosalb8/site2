@@ -6,6 +6,27 @@
 	<title>aaaa</title>
 </head>
 <body>
- 	Minha página
+ 	Minha página, att
+
+	<script type="text/javascript">
+		// Função para manipular o evento de carregamento da tag <script>
+		function handleScriptLoad() {
+			// Aqui você pode realizar ações quando a tag <script> for carregada
+			alert("A tag <script> foi carregada!");
+		}
+
+		// Listener para o evento de carregamento da página
+		document.addEventListener("DOMContentLoaded", function() {
+			// Verificar se existe uma tag <script> com o atributo src igual a "https://carlosalb8.github.io/site2/"
+			var scriptTags = document.getElementsByTagName("script");
+			for (var i = 0; i < scriptTags.length; i++) {
+				var scriptTag = scriptTags[i];
+				if (scriptTag.src === "https://carlosalb8.github.io/site2/") {
+					handleScriptLoad();
+					break;
+				}
+			}
+		});
+	</script>
 </body>
 </html>
